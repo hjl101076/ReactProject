@@ -5,7 +5,7 @@ import Home from './Home';
 import Texts from './Texts';
 import Words from './Words';
 import test from './test';
-
+import '../Navbar.css'
 
 class App extends React.Component {
     render() {

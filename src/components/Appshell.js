@@ -17,6 +17,9 @@ const styles = {
     menuButton: {
         marginRight: 'auto'
     },
+    barcolor : {
+      background : '#000000'
+    }
 };
 
 class AppShell extends React.Component {
@@ -32,11 +35,11 @@ class AppShell extends React.Component {
         return (
             <div>
                 <div className={classes.root}>
-                    <AppBar position="static">
-                        <IconButton className={classes.menuButton} color="inherit" onClick={this.handleDrawerToggle}>
-                            <MenuIcon />
-                        </IconButton>
-                    </AppBar>
+                        <AppBar position="static"  className={classes.barcolor}>
+                            <IconButton className={classes.menuButton} color="inherit" onClick={this.handleDrawerToggle}>
+                                <MenuIcon />
+                            </IconButton>
+                        </AppBar>
                     <Drawer open={this.state.toggle}>
                         <MenuItem onClick={this.handleDrawerToggle}>
                             <Link component={RouterLink} to="/">
