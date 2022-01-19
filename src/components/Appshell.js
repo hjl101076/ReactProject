@@ -19,8 +19,14 @@ const styles = {
     },
     barcolor : {
       background : '#000000'
+    },
+    menuce : 
+    {
+        marginLeft: '30%',
+        fontSize: "x-large",
+        width:300
     }
-};
+};45 
 
 class AppShell extends React.Component {
     constructor(props) {
@@ -40,25 +46,25 @@ class AppShell extends React.Component {
                                 <MenuIcon />
                             </IconButton>
                         </AppBar>
-                    <Drawer open={this.state.toggle}>
-                        <MenuItem onClick={this.handleDrawerToggle}>
+                    <Drawer   open={this.state.toggle}   >
+                        <MenuItem className={classes.menuce} onClick={this.handleDrawerToggle}>
                             <Link component={RouterLink} to="/">
                                 Home
                             </Link>
                         </MenuItem>
-                        <MenuItem onClick={this.handleDrawerToggle}>
+                        <MenuItem className={classes.menuce}  onClick={this.handleDrawerToggle}>
                             <Link component={RouterLink} to="/texts">
-                                Texts
+                                About
                             </Link>
                         </MenuItem>
-                        <MenuItem onClick={this.handleDrawerToggle}>
+                        <MenuItem className={classes.menuce}  onClick={this.handleDrawerToggle}>
                             <Link component={RouterLink} to="/words">
-                                Words
+                                Skills
                             </Link>
                         </MenuItem>
-                        <MenuItem onClick={this.handleDrawerToggle}>
+                        <MenuItem className={classes.menuce}  onClick={this.handleDrawerToggle}>
                             <Link component={RouterLink} to="/test">
-                                myy
+                                Contact
                             </Link>
                         </MenuItem>
                     </Drawer>
