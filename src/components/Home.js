@@ -11,6 +11,8 @@ import { Link as RouterLink } from 'react-router-dom';
 import Link from '@material-ui/core/Link';
 import Drawer from '@material-ui/core/Drawer';
 import * as text from './Texts'
+import Hands from './Hand';
+import VrLip from './VrLipsync';
 
 const styles = {
     media: {
@@ -49,6 +51,14 @@ class Home extends React.Component {
             window.location.href = "#/texts"
         
         }
+
+        const toggleDrawer = (anchor, open) => (event) => {
+            if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+              return;
+            } 
+            
+            this.setState({ [anchor] : open })
+          };
 
       return (
             <><Card style={{ width: '28%',maxWidth: 500 ,float:'left', marginLeft:'10%'}}>
@@ -114,49 +124,41 @@ class Home extends React.Component {
                     <Button onClick={this.handleDrawerToggle3} size="small">Learn More</Button>
                 </CardActions>
             </Card>
-            <Card style={{ width: '28%',maxWidth: 500 ,float:'left', marginLeft:'10%',marginTop:'2%'}}>
-                <CardMedia
-                    className={classes.media}
-                    style={styles.media}
-                    component="img"
-                    image="img/hand-1.jpg"
-                    alt="green iguana" />
-                <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                        Lizard
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000
-                        species, ranging across all continents except Antarctica
-                    </Typography>
-                </CardContent>
-                <CardActions>
-                    <Button onClick={clickMe} size="small">Share</Button>
-                    <Button onClick={this.handleDrawerToggle4} size="small">Learn More</Button>
-                </CardActions>        
-            </Card>
-              <Drawer open={this.state.toggle}>
-                  <div style={{ width: 300 }}>
-                      dsds
-                  </div>
+              <Card style={{ width: '28%', maxWidth: 500, float: 'left', marginLeft: '10%', marginTop: '2%' }}>
+                  <CardMedia
+                      className={classes.media}
+                      style={styles.media}
+                      component="img"
+                      image="img/hand-1.jpg"
+                      alt="green iguana" />
+                  <CardContent>
+                      <Typography gutterBottom variant="h5" component="div">
+                          Lizard
+                      </Typography>
+                      <Typography variant="body2" color="text.secondary">
+                          Lizards are a widespread group of squamate reptiles, with over 6,000
+                          species, ranging across all continents except Antarctica
+                      </Typography>
+                  </CardContent>
+                  <CardActions>
+                      <Button onClick={clickMe} size="small">Share</Button>
+                      <Button onClick={this.handleDrawerToggle4} size="small">Learn More</Button>
+                  </CardActions>
+              </Card>
+              <Drawer open={this.state.toggle} onClose={toggleDrawer("toggle", false)}>
+                  <Hands />
               </Drawer>
 
-              <Drawer anchor='top' open={this.state.top}>
-                  <div style={{ height: 300 }}>
-                      dsds
-                  </div>
+              <Drawer anchor='top' PaperProps={{ style: {  flexDirection: 'row' } }} open={this.state.top} onClose={toggleDrawer('top', false)} >
+                  <VrLip />
               </Drawer>
 
-              <Drawer anchor='bottom' open={this.state.bottom}>
-                  <div style={{ height: 300 }}>
-                      dsds
-                  </div>
+              <Drawer anchor='bottom' PaperProps={{ style: { flexDirection: 'row' } }}open={this.state.bottom} onClose={toggleDrawer('bottom', false)} >
+                  <VrLip />
               </Drawer>
 
-              <Drawer anchor='right' open={this.state.right}>
-                  <div style={{ width: 300 }}>
-                      dsds
-                  </div>
+              <Drawer anchor='right' open={this.state.right} onClose={toggleDrawer('right', false)}>
+                  <Hands />
               </Drawer>
 
            
