@@ -78,8 +78,8 @@ class Home extends React.Component {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button onClick={clickMe} size="small">Share</Button>
                     <Button onClick={this.handleDrawerToggle} size="small">Learn More</Button>
+                    <Button onClick={clickMe} size="small">Detail</Button>                 
                 </CardActions>        
             </Card>
             <Card style={{ width: '28%',maxWidth: 500 , float:'left',marginLeft:'3%'}}> 
@@ -99,8 +99,8 @@ class Home extends React.Component {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button onClick={clickMe} size="small">Share</Button>
                     <Button onClick={this.handleDrawerToggle2}  size="small">Learn More</Button>
+                    <Button onClick={clickMe} size="small">Detail</Button>                    
                 </CardActions>
             </Card>
             <Card style={{ width: '28%',maxWidth: 500 ,float:'left', marginLeft:'3%'}}> 
@@ -120,8 +120,8 @@ class Home extends React.Component {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button onClick={clickMe} size="small">Share</Button>
                     <Button onClick={this.handleDrawerToggle3} size="small">Learn More</Button>
+                    <Button onClick={clickMe} size="small">Detail</Button>                  
                 </CardActions>
             </Card>
               <Card style={{ width: '28%', maxWidth: 500, float: 'left', marginLeft: '10%', marginTop: '2%' }}>
@@ -141,8 +141,8 @@ class Home extends React.Component {
                       </Typography>
                   </CardContent>
                   <CardActions>
-                      <Button onClick={clickMe} size="small">Share</Button>
                       <Button onClick={this.handleDrawerToggle4} size="small">Learn More</Button>
+                      <Button onClick={clickMe} size="small">Detail</Button>                    
                   </CardActions>
               </Card>
               <Drawer open={this.state.toggle} onClose={toggleDrawer("toggle", false)}>
