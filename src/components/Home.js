@@ -149,7 +149,7 @@ class Home extends React.Component {
                   <Hands />
               </Drawer>
 
-              <Drawer anchor='top' PaperProps={{ style: {  flexDirection: 'row' } }} open={this.state.top} onClose={toggleDrawer('top', false)} >
+              <Drawer anchor='top' PaperProps={{ style: {  flexDirection: 'row'} }} open={this.state.top} onClose={toggleDrawer('top', false)} >
                   <VrLip />
               </Drawer>
 
