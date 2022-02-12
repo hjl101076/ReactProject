@@ -8,9 +8,9 @@ class Hands extends React.Component {
         return (
             <>
               <div style={{  display: 'flex' }}>
-                   <img src={'/img/hand-1.jpg'} style={{ height: '50%' }} />
-                   <img src={'/img/hand-1.jpg'}  style={{ height: '50%' }}/>                 
-                    <ul >
+                   <img src={'/img/hand-1.jpg'}  />
+                   <img src={'/img/hand-1.jpg'} />                 
+                    <ul style={{    width: '500px'}}>
                         <li>Contour 알고리즘을 통해 영역을 분리, 저장</li>
                         <br />
                         <li>ConvexHull 알고리즘을 이용하여 손가락 사이의 골의  좌표를 획득</li>
@@ -22,9 +22,9 @@ class Hands extends React.Component {
                 </div>
                 
                 <div style={{ display: 'flex' }}>
-                    <img src={'/img/hand-1.jpg'}  style={{ height: '50%' }}/>
-                    <img src={'/img/hand-1.jpg'}  style={{ height: '50%' }}/>
-                    <ul>
+                    <img src={'/img/hand-1.jpg'} />
+                    <img src={'/img/hand-1.jpg'} />
+                    <ul style={{    width: '500px'}}>
                         <li>Contour 알고리즘을 통해 영역을 분리, 저장</li>
                         <br />
                         <li>ConvexHull 알고리즘을 이용하여 손가락 사이의 골의  좌표를 획득</li>
@@ -34,9 +34,9 @@ class Hands extends React.Component {
                     </ul>
                 </div>
                 <div style={{ display: 'flex' }}>
-                    <img src={'/img/hand-1.jpg'}  style={{ height: '50%' }}/>
-                    <img src={'/img/hand-1.jpg'}  style={{ height: '50%' }}/>
-                    <ul>
+                    <img src={'/img/hand-1.jpg'}  />
+                    <img src={'/img/hand-1.jpg'} />
+                    <ul style={{    width: '500px'}}>
                         <li>Contour 알고리즘을 통해 영역을 분리, 저장</li>
                         <br />
                         <li>ConvexHull 알고리즘을 이용하여 손가락 사이의 골의  좌표를 획득</li>
@@ -46,9 +46,9 @@ class Hands extends React.Component {
                     </ul>
                 </div>
                 <div style={{ display: 'flex' }}>
-                    <img src={'/img/hand-1.jpg'}  style={{ height: '50%' }}/>
-                    <img src={'/img/hand-1.jpg'}  style={{ height: '50%' }}/>
-                    <ul>
+                    <img src={'/img/hand-1.jpg'}  />
+                    <img src={'/img/hand-1.jpg'}  />
+                    <ul style={{    width: '500px'}}>
                         <li>Contour 알고리즘을 통해 영역을 분리, 저장</li>
                         <br />
                         <li>ConvexHull 알고리즘을 이용하여 손가락 사이의 골의  좌표를 획득</li>
