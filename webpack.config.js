@@ -1,5 +1,5 @@
 'use strict'
-const path = require('path');
+const path = require('path'); // 절대 경로 참조
 
 module.exports = {
     entry: 
